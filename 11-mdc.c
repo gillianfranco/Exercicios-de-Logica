@@ -2,26 +2,22 @@
 #include <stdlib.h>
 
 int main(){
-    int n1, n2, mdc, i;
+    int anterior, atual, resto;
     printf("Máximo divisor comum entre dois numeros.\n");
     printf("Digite o primeiro numero: ");
-    scanf("%d", &n1);
+    scanf("%d", &anterior);
     printf("Digite o segundo numero: ");
-    scanf("%d", &n2);
+    scanf("%d", &atual);
 
-    mdc = 0;
+    resto = atual % anterior;
 
-    for(i = 1; n1 <= i || n2 <= i; i++){
-        if(n1%i == 0 && n2%i == 0){
-            mdc = i;
-        }
+    while(resto != 0){
+        resto = anterior % atual;
+        anterior = atual;
+        atual = resto;
     }
 
-    if(mdc == 1){
-        printf("Nao existe MDC para esses numeros.");
-    }else{
-        printf("O MDC desses numeros e' %d", mdc);
-    }
+    printf("%d", anterior);
 
     system("pause >> NULL");
     return 0;
