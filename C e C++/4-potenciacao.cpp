@@ -33,7 +33,12 @@ int main(){
 
 
         escreva("Deseja calcular outra potencia? (Digite 1 para SIM | Digite 0 para NAO)");
-        cin >> continuar;   
+        do{
+            cin >> continuar;
+            if(continuar != 0 && continuar != 1){
+                escreva("Numero invalido! Digite 1 para SIM | Digite 0 para NAO: ");
+            }
+        }while(continuar != 0 && continuar != 1);
     }while(continuar == 1);
     
     return 0;
