@@ -3,19 +3,20 @@
 using namespace std;
 
 int main(){
-    int gastos[5];
+    float gastosDasFamilias[5];
     int total = 0;
-    int qtde, media;
+    int qtde;
+    float media;
     bool verificacao;
 
     for(int i = 0; i < 5; i++){
         cout << "Type the spent money of family [" << i + 1 << "]: ";
-        cin >> gastos[i];
+        cin >> gastosDasFamilias[i];
     }
 
-    qtde = sizeof(gastos) / sizeof(int);
+    qtde = sizeof(gastosDasFamilias) / sizeof(int);
     for(int i = 0; i < qtde; i++){
-        total += gastos[i];
+        total += gastosDasFamilias[i];
     }
 
     media = total / qtde;
@@ -23,11 +24,11 @@ int main(){
 
     for(int i = 0; i < qtde; i++){
         verificacao = false;
-        verificacao = (gastos[i] >= media) ? true : false;
+        verificacao = (gastosDasFamilias[i] >= media) ? true : false;
         if(verificacao)
-            cout << "The family [" << i + 1 << "] is above of the average! Their expenses were " << gastos[i] << endl;
+            cout << "The family [" << i + 1 << "] is above of the average! Their expenses were " << gastosDasFamilias[i] << endl;
         else
-            cout << "The family [" << i + 1 << "] is under of the average! Their expenses were " << gastos[i] << endl;
+            cout << "The family [" << i + 1 << "] is under of the average! Their expenses were " << gastosDasFamilias[i] << endl;
     }
 
     system("pause >> NULL");
