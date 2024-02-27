@@ -27,6 +27,13 @@ int main(){
             cin >> array2[i][j];
         }
     }
+
+    int *arraySum = new int[r][c];
+    for(int i = 0; i < r; i++){
+        for(int j = 0; i < c; i++){
+            arraySum[i][j] = array1[i][j] + array2[i][j];
+        }
+    }
  
     return 0;
 }
