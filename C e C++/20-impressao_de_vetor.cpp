@@ -18,9 +18,10 @@ int main(){
         }
 
         cout << "\n--- Values Inserted ---" << endl;
-        for(int i = 0; i << size; i++){
+        for(int i = 0; i < size; i++){
             cout << "Position [" << i << "] -> Value [" << vector[i] << "]";
         }
+
         do{
             cout << "\nType 0 to finish the programe or type 1 to continue: ";
             cin >> verify;
